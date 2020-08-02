@@ -25,8 +25,7 @@ const renderTrainer = (trainerHash) => {
     p.innerHTML = trainerHash.name
     button.setAttribute("data-trainer-id", trainerHash.id)
     button.innerHTML = "Add Pokemon"
-
-    // attach event listener to button (click)
+    button.addEventListener("click", createPokemon)
 
     div.appendChild(p)
     div.appendChild(button)
@@ -46,7 +45,16 @@ const renderPokemon = (pokemon) => {
     button.setAttribute("class", "release")
     button.setAttribute("data-pokemon-id", pokemon.id)
     button.innerHTML = "Release"
+    button.addEventListener("click", deletePokemon)
 
     li.appendChild(button)
     ul.appendChild(li)
+}
+
+const createPokemon = () => {
+
+}
+
+const deletePokemon = () => {
+    
 }
